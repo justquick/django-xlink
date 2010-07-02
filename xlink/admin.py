@@ -7,10 +7,10 @@ class QueryAdmin(admin.ModelAdmin):
     search_fields = ('search_on','look_for')
     
 class ResultAdmin(admin.ModelAdmin):
-    list_display = ('__unicode__','url','found_on','timestamp')
-    list_editable = ('url',)
+    list_display = ('__unicode__','found_on','timestamp','display')
+    list_editable = ('display',)
     search_fields = ('url','found_on')    
-    list_filter = ('timestamp',)
+    list_filter = ('timestamp','display')
     
 admin.site.register(Query, QueryAdmin)
 admin.site.register(Result, ResultAdmin)

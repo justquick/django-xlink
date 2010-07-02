@@ -7,7 +7,7 @@ Django Cross Link Documentation
 
 ::
 
-    pip install django-xlink==0.1.0
+    pip install django-xlink==0.1.1
 
 Django Cross Link takes in particular URLs on an external site and periodically
 combs through those URLs searching for links back to your site. The cross

@@ -12,6 +12,7 @@ class Result(models.Model):
     url = models.URLField(help_text='URL found on external site')
     found_on = models.URLField(help_text='URL of external site where link was found')
     timestamp = models.DateTimeField(auto_now_add=True)
+    display = models.BooleanField(default=True)
     
     def __unicode__(self):
         return self.url
