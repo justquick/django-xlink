@@ -20,7 +20,7 @@ class Command(BaseCommand):
                 except IndexError:
                     continue
                 if domain == query.look_for:
-                    lookup = {'url':url, 'found_on': query.search_on}
+                    lookup = {'url':url, 'found_on':query.search_on, 'text':link[0].text}
                     try:
                         Result.objects.filter(**lookup)[0]
                     except IndexError:

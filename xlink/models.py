@@ -10,6 +10,7 @@ class Query(models.Model):
     
 class Result(models.Model):
     url = models.URLField(help_text='URL found on external site')
+    text = models.CharField(max_length=255,help_text='Text of link with URL on external site',blank=True,null=True)
     found_on = models.URLField(help_text='URL of external site where link was found')
     timestamp = models.DateTimeField(auto_now_add=True)
     display = models.BooleanField(default=True)
